@@ -5,6 +5,11 @@ import AppTopbar from "../components/AppTopbar";
 import Lottery from "../lottery/Lottery";
 import Login from "../login/Login";
 import AccountInfo from "../accountInfo/AccountInfo";
+import Create from "../members/Create";
+import Lists from "../members/Lists";
+import ChangePassword from "../changePassword/ChangePassword";
+import Report from "../report/Report";
+import Bet from "../bet/Bet";
 
 const Dashboard = () => {
   const [authUser, setAuthUser] = useState({
@@ -14,7 +19,7 @@ const Dashboard = () => {
   });
 
   useEffect(() => {
-    const locs = localStorage.getItem("access-token");
+    // const locs = localStorage.getItem("access-token");
 
     if (localStorage.getItem("access-token")) {
       let user = JSON.parse(localStorage.getItem("user-info"));
@@ -39,10 +44,15 @@ const Dashboard = () => {
         element={<AccountInfo authUser={authUser} />}
       />
       <Route path="/lottery" element={<Lottery />} />
+      <Route path="/members/create" element={<Create />} />
+      <Route path="/members/lists" element={<Lists />} />
+      <Route path="/change_password" element={<ChangePassword />} />
+      <Route path="/reports" element={<Report />} />
+      <Route path="/lottery/bet/:lotteryId" element={<Bet />} />
+
       {/* <Route path="/view" element={<View />} />
       <Route path="/view/lager/:lotteryId" element={<LagerReport />} />
 
-      <Route path="/lottery/bet/:lotteryId" element={<Bet />} />
       <Route path="/lottery/calls/:lotteryId" element={<CallsList />} />
       <Route path="/lottery/lager/:lotteryId" element={<Lager />} />
 
@@ -55,7 +65,6 @@ const Dashboard = () => {
         path="/reports/agent/:agentId/calls/:lotteryId/:callId"
         element={<CallDetail />}
       />
-      <Route path="/change_password" element={<ChangePassword />} />
       
       <Route path="/customer" element={<Customer />} /> */}
     </Routes>
