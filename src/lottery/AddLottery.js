@@ -54,7 +54,7 @@ const AddLottery = ({
                   size="small"
                   name="pout_tee"
                   sx={{ bgcolor: teal[50] }}
-                  //   value={lottery.hot_tee}
+                  value={lotCreate.pout_tee}
                   onChange={(e) => createLottery(e)}
                 />
               }
@@ -73,7 +73,7 @@ const AddLottery = ({
                   size="small"
                   name="hot_tee"
                   sx={{ bgcolor: teal[50] }}
-                  //   value={lottery.hot_tee}
+                  value={lotCreate.hot_tee}
                   onChange={(e) => createLottery(e)}
                 />
               }
@@ -92,7 +92,7 @@ const AddLottery = ({
                   size="small"
                   name="_time"
                   sx={{ bgcolor: teal[50] }}
-                  //   value={lottery.pate}
+                  value={lotCreate.time}
                   onChange={(e) => createLottery(e)}
                 />
               }

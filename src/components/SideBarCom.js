@@ -109,14 +109,14 @@ const SideBarCom = ({ setHandleOpen, handdleopen, name, setAuthUser }) => {
               <ListItemIcon>
                 <ListAlt />
               </ListItemIcon>
-              <ListItemText primary="Agents" />
+              <ListItemText primary="Members" />
               {subopen ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse in={!subopen} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 <NavLink
                   style={{ textDecoration: "none", color: "inherit" }}
-                  to="/agents/agent_create"
+                  to="/members/create"
                   onClick={() => setHandleOpen(false)}
                 >
                   <ListItemButton sx={{ pl: 4 }}>
@@ -129,7 +129,7 @@ const SideBarCom = ({ setHandleOpen, handdleopen, name, setAuthUser }) => {
                 </NavLink>
                 <NavLink
                   style={{ textDecoration: "none", color: "inherit" }}
-                  to="/agents/agent_list"
+                  to="/members/lists"
                   onClick={() => setHandleOpen(false)}
                 >
                   <ListItemButton sx={{ pl: 4 }}>
